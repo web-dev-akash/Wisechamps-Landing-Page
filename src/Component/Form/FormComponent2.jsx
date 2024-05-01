@@ -1,7 +1,6 @@
 import { FormComponent } from "./FormComponent";
-import ProtoTypes from "prop-types";
 
-export const FormComponent2 = ({ freeSession }) => {
+export const FormComponent2 = () => {
   return (
     <section
       className="form-section"
@@ -32,14 +31,10 @@ export const FormComponent2 = ({ freeSession }) => {
               borderRadius: "20px",
             }}
           >
-            <FormComponent register freeSession={freeSession} />
+            <FormComponent register />
           </div>
         </div>
       </div>
     </section>
   );
-};
-
-FormComponent2.propTypes = {
-  freeSession: ProtoTypes.any,
 };

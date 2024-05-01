@@ -1,8 +1,9 @@
 import { Box } from "@chakra-ui/react";
 import { FormComponent } from "../Form/FormComponent";
 import { MainCarousel } from "../Carousel/Carousel";
+import ProtoTypes from "prop-types";
 
-function HomeHero() {
+function HomeHero({ freeSession }) {
   return (
     <Box
       as={"section"}
@@ -78,7 +79,7 @@ function HomeHero() {
                 background: "#ccffcc99",
               }}
             >
-              <FormComponent />
+              <FormComponent freeSession={freeSession} />
             </div>
           </div>
         </div>
@@ -86,5 +87,9 @@ function HomeHero() {
     </Box>
   );
 }
+
+HomeHero.propTypes = {
+  freeSession: ProtoTypes.any,
+};
 
 export default HomeHero;

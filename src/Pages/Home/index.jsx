@@ -57,7 +57,7 @@ function Home() {
         storyRef={stories}
         freeSession={freeSession}
       />
-      <HomeHero />
+      <HomeHero freeSession={freeSession} />
       <PopularCourse quizRef={quizzing} addToRefs={addToRefs} />
       <Box ref={addToRefs}>
         <Rewards rewardRef={rewards} />
@@ -67,7 +67,7 @@ function Home() {
       </Box>
       <Testimonial storyRef={stories} addToRefs={addToRefs} />
       <Box ref={addToRefs}>
-        <FormComponent2 freeSession={freeSession} />
+        <FormComponent2 />
       </Box>
       <Box ref={addToRefs}>
         <Footer />
