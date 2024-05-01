@@ -3,7 +3,7 @@ import CourseItemCard from "../Cards/CourseItemCard";
 import { Box, Text } from "@chakra-ui/react";
 import Video from "../Video/Video";
 
-function PopularCourse({ quizRef, ref }) {
+function PopularCourse({ quizRef, addToRefs }) {
   return (
     <Box
       as="section"
@@ -13,13 +13,15 @@ function PopularCourse({ quizRef, ref }) {
     >
       <div className="container">
         <div
-          ref={ref}
           className="row"
           style={{
             marginBottom: "40px",
           }}
         >
-          <div className="d-lg-flex d-sm-flex col-lg-5 col-md-5 justify-content-center align-content-center flex-column">
+          <div
+            ref={addToRefs}
+            className="d-lg-flex d-sm-flex col-lg-5 col-md-5 justify-content-center align-content-center flex-column"
+          >
             <Text
               as={"h2"}
               className="sec-title"
@@ -47,7 +49,7 @@ function PopularCourse({ quizRef, ref }) {
             />
           </div>
         </div>
-        <div className="row">
+        <div className="row" ref={addToRefs}>
           <div className="col-lg-12">
             <div className="course-wrapper">
               <CourseItemCard title="Learn With Experts">
@@ -105,7 +107,7 @@ function PopularCourse({ quizRef, ref }) {
 
 PopularCourse.propTypes = {
   quizRef: ProtoTypes.any,
-  ref: ProtoTypes.any,
+  addToRefs: ProtoTypes.any,
 };
 
 export default PopularCourse;

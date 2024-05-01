@@ -1,11 +1,10 @@
 import { Box, Image } from "@chakra-ui/react";
-import ProtoTypes from "prop-types";
 import { SocialIcon } from "react-social-icons";
 import { FaPhone } from "react-icons/fa6";
-function Footer({ ref }) {
+function Footer() {
   return (
     <footer className={`footer-1`}>
-      <div className="container" ref={ref}>
+      <div className="container">
         <div className="row">
           <div className="col-lg-12 text-center" style={{ padding: 0 }}>
             <aside className="widget" style={{ marginTop: "0" }}>
@@ -90,9 +89,5 @@ function Footer({ ref }) {
     </footer>
   );
 }
-
-Footer.propTypes = {
-  ref: ProtoTypes.any,
-};
 
 export default Footer;

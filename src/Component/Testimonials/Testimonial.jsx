@@ -2,7 +2,7 @@ import { Box, Image, Text } from "@chakra-ui/react";
 import ProtoTypes from "prop-types";
 import Video from "../Video/Video";
 
-function Testimonial({ storyRef, ref }) {
+function Testimonial({ storyRef, addToRefs }) {
   return (
     <Box
       as="section"
@@ -11,8 +11,9 @@ function Testimonial({ storyRef, ref }) {
       className="popular-course-section"
     >
       <div className="container">
-        <div className="row" ref={ref}>
+        <div className="row">
           <div
+            ref={addToRefs}
             className="col-lg-5 col-md-5 d-lg-flex d-sm-flex justify-content-center flex-column"
             style={{ paddingRight: "0" }}
           >
@@ -64,7 +65,7 @@ function Testimonial({ storyRef, ref }) {
 
 Testimonial.propTypes = {
   storyRef: ProtoTypes.any,
-  ref: ProtoTypes.any,
+  addToRefs: ProtoTypes.any,
 };
 
 export default Testimonial;

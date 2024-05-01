@@ -2,12 +2,11 @@ import ProtoTypes from "prop-types";
 import { RewardsCarousel } from "../Carousel/RewardsCarousel";
 import { Box, Text } from "@chakra-ui/react";
 import { RewardSteps } from "../Steps/Steps";
-export const Rewards = ({ rewardRef, ref }) => {
+export const Rewards = ({ rewardRef }) => {
   return (
     <section ref={rewardRef} className="rewards-section">
       <div className="container">
         <div
-          ref={ref}
           className="row"
           style={{ overflow: "hidden", paddingLeft: "0", paddingRight: "0" }}
         >
@@ -71,5 +70,4 @@ export const Rewards = ({ rewardRef, ref }) => {
 
 Rewards.propTypes = {
   rewardRef: ProtoTypes.any,
-  ref: ProtoTypes.any,
 };

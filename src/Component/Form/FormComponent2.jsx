@@ -1,7 +1,7 @@
 import { FormComponent } from "./FormComponent";
 import ProtoTypes from "prop-types";
 
-export const FormComponent2 = ({ freeSession, ref }) => {
+export const FormComponent2 = ({ freeSession }) => {
   return (
     <section
       className="form-section"
@@ -22,7 +22,7 @@ export const FormComponent2 = ({ freeSession, ref }) => {
           overflow: "hidden",
         }}
       >
-        <div className="row" ref={ref}>
+        <div className="row">
           <div
             className="col-md-12"
             style={{
@@ -42,5 +42,4 @@ export const FormComponent2 = ({ freeSession, ref }) => {
 
 FormComponent2.propTypes = {
   freeSession: ProtoTypes.any,
-  ref: ProtoTypes.any,
 };

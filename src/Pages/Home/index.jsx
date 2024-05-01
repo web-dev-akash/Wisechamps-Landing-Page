@@ -38,7 +38,6 @@ function Home() {
         }
       );
     });
-    console.log("Animated Refs :", animateRef);
   }, []);
 
   const addToRefs = (ele) => {
@@ -59,18 +58,14 @@ function Home() {
         freeSession={freeSession}
       />
       <HomeHero />
-      <Box ref={addToRefs}>
-        <PopularCourse quizRef={quizzing} />
-      </Box>
+      <PopularCourse quizRef={quizzing} addToRefs={addToRefs} />
       <Box ref={addToRefs}>
         <Rewards rewardRef={rewards} />
       </Box>
       <Box ref={addToRefs}>
         <Leagues />
       </Box>
-      <Box ref={addToRefs}>
-        <Testimonial storyRef={stories} />
-      </Box>
+      <Testimonial storyRef={stories} addToRefs={addToRefs} />
       <Box ref={addToRefs}>
         <FormComponent2 freeSession={freeSession} />
       </Box>

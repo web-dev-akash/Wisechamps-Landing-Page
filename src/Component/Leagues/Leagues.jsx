@@ -1,10 +1,9 @@
 import { Text } from "@chakra-ui/react";
 import { LeagueSlider } from "./LeagueSlider";
-import ProtoTypes from "prop-types";
 
-export const Leagues = ({ ref }) => {
+export const Leagues = () => {
   return (
-    <section className="league-section" ref={ref}>
+    <section className="league-section">
       <div className="container">
         <div className="row">
           <div className="col-md-12 text-center">
@@ -30,8 +29,4 @@ export const Leagues = ({ ref }) => {
       </div>
     </section>
   );
-};
-
-Leagues.propTypes = {
-  ref: ProtoTypes.any,
 };
